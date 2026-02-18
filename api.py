@@ -55,6 +55,10 @@ def add_to_queue():
         print(f"An error occurred: {e}")
         return jsonify({"error": "An internal server error occurred"}), 500
 
-
+@app.route('/api/mangas', methods=['GET'])
+def list_mangas():
+    from database import get_all_mangas_with_tags
+    mangas = get_all_mangas_with_tags()
+    return jsonify(mangas)
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
