@@ -4,7 +4,7 @@ import time
 from datetime import datetime
 from typing import Optional
 
-DB_PATH = "/database/manga_database.db"
+DB_PATH = "manga_database.db"
 
 def get_db_connection():
     conn = sqlite3.connect(DB_PATH)
