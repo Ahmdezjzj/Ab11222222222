@@ -1,4 +1,4 @@
-app = "manga-scraper"
+app = "ab1122222222"
 primary_region = "ams"
 
 [build]
@@ -18,9 +18,3 @@ protocol = "tcp"
   [[services.ports]]
   handlers = ["tls", "http"]
   port = 443
-
-  [[services.tcp_checks]]
-  interval = "15s"
-  timeout = "2s"
-  grace_period = "5s"
-  restart_limit = 5
